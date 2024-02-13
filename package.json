@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://r0ckatansky.github.io/portfolio",
   "scripts": {
-    "deploy": "gh-pages -d build",
+    "deploy": "npm run build && gh-pages -d build",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
