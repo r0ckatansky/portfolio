@@ -1,8 +1,10 @@
 {
-  "name": "astro-boilerplate",
+  "name": "@portfolio/paul-trochel",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://r0ckatansky.github.io/portfolio",
   "scripts": {
+    "deploy": "gh-pages -d build",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -41,6 +43,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "eslint-plugin-unused-imports": "^2.0.0",
+    "gh-pages": "^6.1.1",
     "husky": "^8.0.3",
     "lint-staged": "^12.5.0",
     "path-browserify": "^1.0.1",
