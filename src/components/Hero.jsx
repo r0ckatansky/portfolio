@@ -5,11 +5,10 @@ import styled from "styled-components";
 // Icons
 import { Icon } from "@iconify/react";
 // Media
-import Logo from "../images/logo.svg";
+import Logo from "../images/logo.png";
 import { Light, Dark } from "../data";
 // Components
 import { Col, Container, Row } from "react-bootstrap";
-import { Spin } from "./globalStyledComponents";
 import SocialLinks from "./SocialLinks";
 
 const StyledHero = styled.header`
@@ -55,7 +54,37 @@ const StyledHero = styled.header`
 
   @media (prefers-reduced-motion: no-preference) {
     .hero-img {
-      animation: ${Spin} infinite 20s linear;
+      width: 200px !important;
+      position: relative;
+      border-radius: 100%;
+    }
+    .hero-img.active {
+      position: fixed;
+      animation: spin 1s linear infinite;
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      top: 0;
+      left: 0;
+      transform: rotate(0deg);
+    }
+    33% {
+      top: 0;
+      left: 100%;
+      transform: rotate(90deg);
+    }
+    66% {
+      top: 100%;
+      left: 0;
+      transform: rotate(180deg);
+    }
+    100% {
+      top: 100%;
+      left: 100%;
+      transform: translate(-0%, -0%);
+      transform: rotate(360deg);
     }
   }
 
@@ -93,7 +122,15 @@ export default function Hero() {
               <SocialLinks />
             </div>
           </Col>
-          <Col className="d-none d-md-block">
+          <Col className="d-none d-md-block"
+              onClick={(element) => {
+              if (element.target.classList.contains("active")) {
+                element.target.classList.remove("active");
+              } else {
+                element.target.classList.add("active");
+              }
+            }}      
+          >
             <img
               src={Logo}
               alt="React Logo"
