@@ -52,7 +52,6 @@ const StyledHero = styled.header`
     height: 10rem;
   }
 
-  @media (prefers-reduced-motion: no-preference) {
     .hero-img {
       width: 200px !important;
       position: relative;
@@ -62,29 +61,33 @@ const StyledHero = styled.header`
       position: fixed;
       animation: spin 1s linear infinite;
     }
-  }
+
 
   @keyframes spin {
     0% {
       top: 0;
       left: 0;
       transform: rotate(0deg);
+      filter: hue-rotate(0deg) contrast(1);
     }
     33% {
-      top: 0;
+      top: 100%;
       left: 100%;
       transform: rotate(90deg);
+      filter: hue-rotate(90deg) contrast(25);
     }
     66% {
       top: 100%;
       left: 0;
       transform: rotate(180deg);
+      filter: hue-rotate(180deg) contrast(1);
     }
     100% {
-      top: 100%;
+      top: 0;
       left: 100%;
       transform: translate(-0%, -0%);
       transform: rotate(360deg);
+      filter: hue-rotate(360deg) contrast(1);
     }
   }
 
