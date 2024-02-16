@@ -1,130 +1,129 @@
-# Astro Boilerplate with TypeScript and Tailwind CSS [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
+# A React Portfolio Template for GitHub
 
-🚀 Astro Boilerplate is starter code for your blog or portfolio based on Astro
-with Tailwind CSS 3.0. ⚡️ Made with Astro, TypeScript, ESLint, Prettier,
-Tailwind CSS.
+[![GitHub Repo stars](https://img.shields.io/github/stars/mshuber1981/github-react-portfolio-template?color=%2361dbfb&style=for-the-badge&logo=github)](https://github.com/mshuber1981/github-react-portfolio-template/stargazers/) [![GitHub Repo Forks](https://img.shields.io/github/forks/mshuber1981/github-react-portfolio-template?color=%2361dbfb&style=for-the-badge&logo=github&label=Forks)](https://github.com/mshuber1981/github-react-portfolio-template/network/members)
 
-Clone this project and use it to create your own Astro blog. You can check the
-[Astro templates demo](https://creativedesignsguru.com/demo/astro-boilerplate/).
+A performant, accessible, progressive React portfolio template that uses the [GitHub REST API](https://docs.github.com/en/free-pro-team@latest/rest).
 
-## Features
+Add your GitHub username once and all of your info will automatically be updated. Deploy to GitHub pages in a few simple steps.
 
-A complete Blog feature:
+## [Live Demo](https://mshuber1981.github.io/github-react-portfolio-template/#/)
 
-- 🎈 Syntax Highlighting
-- 🤖 SEO friendly with sitemap.xml and robots.txt
-- ⚙️ RSS feed
-- 📖 Pagination
-- 🌈 Include a dark blog theme
-- ⬇️ Markdown
-- 📦 Image lazy loading
-- 💎 Responsive design
+[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 
-Developer experience first:
+![Page Speed](/README_images/speed.png)
 
-- 🔥 Astro
-- 🎨 Tailwind CSS with aspect ratio and typography plugin
-- 🎉 TypeScript
-- ✏️ ESLint compatible with .astro files
-- 🛠 Prettier compatible with .astro files
-- 🦊 Husky
-- 🚫 lint-staged
-- 🚨 Commitlint
-- 🔧 One-click deploy on Netlify (or, manual if you prefer)
+## Light And Dark Themes
 
-ESLint with:
+![Hero Light](/README_images/hero.png)
 
-- Airbnb styled guide
-- TypeScript compatible
-- Astro compatible
-- Automatically remove unused imports
-- Import sorting
-- Tailwind CSS plugin
+![Hero Dark](/README_images/heroDark.png)
 
-### Philosophy
+### Getting Started
 
-- Minimal code
-- SEO-friendly
-- 🚀 Production-ready
+1. [Create a repository from this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+2. [Clone your repository](https://developers.google.com/speed/pagespeed/insights/)
+3. Make sure [Node](https://nodejs.org/en/) is installed
+4. Open your project and install the dependencies
 
-### Requirements
+   ```bash
+   npm install
+   ```
 
-- Node.js and npm
+5. Navigate to the src directory and open data.js
+6. Add your GitHub username ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L17) lines 17-21)
 
-#### Optional
+   ```javascript
+   /* START HERE
+   ************************************************************** 
+     Add your GitHub username (string - "YourUsername") below.
+   */
+   export const githubUsername = "Your GitHub username here";
+   ```
 
-- [nvm](https://github.com/nvm-sh/nvm)
-- [volta](https://volta.sh/)
+7. Start the development server to view the results
 
-While Astro-boilerplate should work with the latest Node version, it has been
-tested with the versions in .nvmrc & the bottom of package.json. At current
-writing, that's Node v16.15.1
+   ```bash
+   npm start
+   ```
 
-### Getting started
+### Updating the Projects section
 
-Run the following command on your local environment:
+![Projects](/README_images/projects.png)
 
-``` bash
-git clone --depth=1 https://github.com/ixartz/Astro-boilerplate
-cd my-project-name
-npm install
-```
+1. Follow the instructions to update the filteredProjects array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L91) lines 91-95)
 
-Then, you can run locally in development mode with live reload:
+   ```javascript
+   /* Projects
+   ************************************************************** 
+     List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
+   */
+   export const filteredProjects = ["example-1", "example-2", "example-3"];
+   ```
 
-``` bash
-npm run dev
-```
+2. Import the projects images you want to use ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L7) lines 7-8) or the default image will be applied
 
-Open [http://localhost:4321](http://localhost:4321) with your favorite browser
-to see your project.
+   ```javascript
+   // Projects Images (add your images to the images directory and import below)
+   import Logo from "./images/logo.svg";
+   ```
 
-### Deploy to production (manual)
+3. Follow the instructions to update the projectCardImages array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L97) lines 97-103)
 
-You can create an optimized production build with:
+   ```javascript
+   // Replace the defualt GitHub image for matching repos below (images imported above - lines 7-8)
+   export const projectCardImages = [
+     {
+       name: "example-1",
+       image: Logo,
+     },
+   ];
+   ```
 
-```shell
-npm run build
-```
+### Updating the Contact section
 
-Now, your blog is ready to be deployed. All generated files are located at
-`dist` folder, which you can deploy the folder to any hosting service you
-prefer.
+![Projects](/README_images/contact.png)
 
-### Deploy to Netlify
+1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L105) lines 105-110)
 
-Clone this repository on own GitHub account and deploy to Netlify:
+   ```javascript
+   /* Contact Info
+   ************************************************************** 
+     Add your formspree endpoint below.
+     https://formspree.io/
+   */
+   export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
+   ```
 
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ixartz/Astro-boilerplate)
+### Deploy
 
-## 🧞 Commands
+A helpful guide for Create React App deployments with GitHub Pages can be found [here](https://create-react-app.dev/docs/deployment#github-pages).
 
-All commands are run from the root of the project, from a terminal:
+1. Update the homepage value ([package.json](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/package.json#L3) line 3)
 
-| Command           | Action                                       |
-|:----------------  |:-------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:4321`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
-| `npm run clean`   | Remove `./dist` folder                       |
-| `npm run lint`    | Run ESLint and report styling error          |
+   ```json
+   "homepage": "https://YourUsername.github.io/your-app/",
+   ```
 
-### Contributions
+2. Run the deploy command
 
-Everyone is welcome to contribute to this project.
-Feel free to open an issue if you have question or found a bug.
+   ```bash
+   npm run deploy
+   ```
 
-### Additional Checks
+### Customization Options
 
-This README.md was linted with
-[markdownlint](https://github.com/igorshubovych/markdownlint-cli)
+Checkout the [Wiki](https://github.com/mshuber1981/github-react-portfolio-template/wiki) for additional customization options:
+
+- [Updating the Hero images](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Hero-images)
+- [Add a custom Blog icon](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Hero-images#add-a-custom-blog-icon)
+- [Updating the About Me section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-About-Me-section)
+- [Updating the Skills section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section)
+- [Add a link to your resume](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section#add-a-link-to-your-resume)
+- [Updating the Navbar Logo](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Navbar-Logo)
+- [Including a Live Demo link on your project cards](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Including-a-Live-Demo-link-on-your-project-cards)
+
+[Back to top :top:](#a-react-portfolio-template-for-github)
 
 ### License
 
-Licensed under the MIT License, Copyright © 2022
-
----
-
-Made with ♥ by [CreativeDesignsGuru](https://creativedesignsguru.com)
-[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
+[MIT](https://choosealicense.com/licenses/mit/)
