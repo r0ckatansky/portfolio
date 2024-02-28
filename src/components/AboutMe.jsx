@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { selectData } from "../pages/homeSlice";
 import { Element } from "react-scroll";
+import img from "../images/cv.jpg";
 // Data
 import { moreInfo } from "../data";
 // Components
@@ -15,6 +16,9 @@ const StyledAboutMe = styled.section`
   .img {
     width: 18rem;
     height: 18rem;
+  }
+  .cv {
+    height: 70rem;
   }
 `;
 
@@ -33,21 +37,13 @@ export default function AboutMe() {
           </Container>
           <Row className="align-items-center mt-5">
             <Col className="d-flex flex-column text-center">
-              <Container>
+              <Container className="">
                 <p>{bio}</p>
                 {moreInfo && <p>{moreInfo}</p>}
+                {<img src={img} alt="about me" className="cv" />}
               </Container>
             </Col>
-            <Col className="d-none d-md-block text-center">
-              <img
-                src={avatar_url}
-                alt="GitHub Avatar"
-                loading="lazy"
-                className="mx-auto rounded-circle"
-                style={{ width: "15rem", height: "15rem" }}
-              />
-            </Col>
-          </Row>
+            </Row>
         </Container>
       </StyledAboutMe>
     </Element>

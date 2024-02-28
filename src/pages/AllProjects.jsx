@@ -52,7 +52,7 @@ export default function AllProjects() {
 
   React.useEffect(
     function () {
-      document.title = `${name} | All Projects`;
+      document.title = `${name} | Tous les projets`;
     },
     [name]
   );
@@ -129,7 +129,7 @@ export default function AllProjects() {
             <Container className="d-flex">
               <Title>
                 <h2>
-                  All <Icon icon="mdi:github" /> Projects
+                  Tous  <Icon icon="mdi:github" /> les projets
                 </h2>
                 <div className="underline"></div>
               </Title>
@@ -148,7 +148,7 @@ export default function AllProjects() {
             <Container className="d-flex">
               <Title>
                 <h2>
-                  All <Icon icon="mdi:github" /> Projects
+                  Tous <Icon icon="mdi:github" /> les projets
                 </h2>
                 <div className="underline"></div>
               </Title>
@@ -167,7 +167,7 @@ export default function AllProjects() {
             <Container className="d-flex">
               <Title>
                 <h2>
-                  All <Icon icon="mdi:github" /> Projects
+                  Tous <Icon icon="mdi:github" /> les projets
                 </h2>
                 <div className="underline"></div>
               </Title>

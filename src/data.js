@@ -31,7 +31,7 @@ export const Blog = <Icon icon="ph:link-bold" />;
   Add a second paragraph for the about me section.
 */
 export const moreInfo =
-  "I enjoy learning about technology and helping others use it to improve their lives and be more productive. I built this site with React, React Bootstrap, Redux, and the GitHub REST API.";
+  "Je suis un étudiant en BUT 3, actuellement en alternance, je suis passioné par la cybersécurité. J'ai fait ce site web en JavaScript en utilisant React.";
 
 /* Skills
  ************************************************************** 
@@ -40,8 +40,8 @@ export const moreInfo =
 export const skillData = [
   {
     id: 1,
-    skill: <Icon icon="mdi:language-html5" className="display-4" />,
-    name: "HTML5",
+    name: "Adapter des applications sur un ensemble de supports (embarqué, web, mobile, IoT…),"
+    
   },
   {
     id: 2,

@@ -56,7 +56,7 @@ export default function Projects() {
           <Container>
             <Container className="d-flex">
               <Title>
-                <h2>Projets (sur GitHub)</h2>
+                <h2>Projets (académiques)</h2>
                 <div className="underline"></div>
               </Title>
             </Container>

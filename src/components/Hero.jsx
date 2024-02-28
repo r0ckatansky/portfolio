@@ -15,7 +15,6 @@ const StyledHero = styled.header`
   position: relative;
   display: grid;
   place-items: center;
-  max-width: 1920px;
   margin: 0 auto;
   min-height: calc(100vh - var(--nav-height));
 
@@ -91,17 +90,9 @@ const StyledHero = styled.header`
     }
   }
 
-  @media screen and (min-width: 1180px) {
-    &::before {
-      background: ${({ theme }) =>
-        theme.name === "light"
-          ? `url(${Light}) top center fixed no-repeat`
-          : `url(${Dark}) top center fixed no-repeat`};
-      background-size: 100vw auto;
-    }
-  }
 
-  @media screen and (min-width: 1367px) {
+
+  @media screen and (min-width: 1px) {
     &::before {
       background: ${({ theme }) =>
         theme.name === "light"
