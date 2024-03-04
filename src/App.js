@@ -21,7 +21,6 @@ import NavBar from "./components/NavBar";
 // Pages
 import Home from "./pages/Home";
 import AllProjects from "./pages/AllProjects";
-import NotFound from "./pages/NotFound";
 
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const themes = {
