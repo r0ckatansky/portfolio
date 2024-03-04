@@ -13,11 +13,11 @@ import { useRef } from 'react';
 export default function Projects() {
   const mainProjects = [
     { id: 1, name: "Évolution d'une infrastructure", image: "infra", description: "Conception d'une architecture réseau complète. Autonomie totale sur les choix d'adressage, de routage, les services, la sécurité.",  liste: ["Réaliser", "Administrer", "Collaborer"]}, // SAE but 3
-    { id: 2, name: "Modélisation mathématique", image: "maths", description: "Projet de mathématiques. Nous avons découvert comment fonctionnait le bruit numérique, comment l'ajouter artificielement ou le retirer en suivant des formules, et en les appliquant dans des algorithmes.", liste: ["Optimiser", "Collaborer"]}, // projet de maths
-    { id: 3, name: "Projet Trisomie 21", image: "t21", description: "Projet principal de la deuxième année, durant lequel nous avons développé un site web en PHP communiquant avec une base de donnée. Nous l'avons ensuite déployé sur une vm distante, en s'y connectant via SSH.", liste: ["Administrer", "Gérer", "Conduire", "Collaborer"]}, // SAE but 2
-    { id: 4, name: "Alternance CTI toulouse", image: "cti", description: "Alternance CTI toulouse", liste: ["Réaliser", "Optimiser", "Administrer", "Gérer", "Conduire", "Collaborer"]}, // alternance
-    { id: 5, name: "Emulation d'un routeur Wi-Fi sur un Raspi", image: "raspi", description: "Emulation d'un routeur Wi-Fi sur un Raspi", liste: ["Réaliser", "Collaborer"]}, // projet raspi
-    { id: 6, name: "Développement d'un proxy TCP", description: "Développement d'un proxy transparent TCP", image: "proxy", liste: ["Optimiser", "Collaborer"]}, // proxy tcp
+    { id: 2, name: "Modélisation mathématique", image: "maths", description: "Découverte du fonctionnement du bruit numérique. Implémentation d'algorithmes d'ajout et de diminution du bruit sur des images.", liste: ["Optimiser", "Collaborer"]}, // projet de maths
+    { id: 3, name: "Projet Trisomie 21", image: "t21", description: "Développement d'un site web en PHP avec intégration à une base de données. Déploiement sur une machine virtuelle distante avec connexion via SSH", liste: ["Administrer", "Gérer", "Conduire", "Collaborer"]}, // SAE but 2
+    { id: 4, name: "Alternance CTI toulouse", image: "cti", description: "Alternance CTI toulouse. Développement en TSX d'un site de pilotage projet", liste: ["Réaliser", "Optimiser", "Administrer", "Gérer", "Conduire", "Collaborer"]}, // alternance
+    { id: 5, name: "Emulation d'un routeur Wi-Fi sur un Raspi", image: "raspi", description: "Emulation d'un routeur Wi-Fi sur un raspberry pi et ajout de services avec Python.", liste: ["Réaliser", "Collaborer"]}, // projet raspi
+    { id: 6, name: "Développement d'un proxy TCP", description: "Développement d'un proxy transparent TCP en C", image: "proxy", liste: ["Optimiser", "Collaborer"]}, // proxy tcp
   ];
 
   const sectionRef = useRef(null);
