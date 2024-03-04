@@ -23,7 +23,7 @@ const StyledAboutMe = styled.section`
 `;
 
 export default function AboutMe() {
-  const { avatar_url, bio } = useSelector(selectData);
+  const { bio } = useSelector(selectData);
 
   return (
     <Element name={"About"} id="about">

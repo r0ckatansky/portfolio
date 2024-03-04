@@ -1,4 +1,3 @@
-import { useAppContext } from "../appContext";
 import { Element } from "react-scroll";
 // Data
 // Components
@@ -6,10 +5,6 @@ import { Container } from "react-bootstrap";
 import { Title } from "./globalStyledComponents";
 
 import { Link } from "react-scroll";
-import { Icon } from "@iconify/react";
-
-
-
 
 import c1 from "../images/c1.png";
 import c2 from "../images/c2.png";
@@ -36,12 +31,10 @@ import c31 from "../images/c31.png";
 import c33 from "../images/c33.png";
 import c36 from "../images/c36.png";
 
-import c00 from "../images/c00.png";
 
 
 export default function Skills() {
 
-    const { theme } = useAppContext();
 
   return (
     <Element name={"Skills"} id="skills">

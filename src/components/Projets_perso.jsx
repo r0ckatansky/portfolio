@@ -1,20 +1,12 @@
 import React from "react";
-import { useAppContext } from "../appContext";
 import { useSelector } from "react-redux";
-import {
-  selectData,
-  selectError,
-  selectIsLoading,
-} from "../pages/allProjectsSlice";
-import { Link } from "react-router-dom";
+import { selectData } from "../pages/allProjectsSlice";
 import { Element } from "react-scroll";
 // Data
 import { filteredProjects } from "../data";
-// Icons
-import { Icon } from "@iconify/react";
 // Components
-import { Button, Col, Container, Row } from "react-bootstrap";
-import { Title, Loading } from "./globalStyledComponents";
+import { Col, Container, Row } from "react-bootstrap";
+import { Title, } from "./globalStyledComponents";
 import StyledCard from "./StyledCard";
 
 import { useRef } from 'react';
@@ -23,9 +15,6 @@ import { useRef } from 'react';
 
 export default function Projects() {
   const [mainProjects, setMainProjects] = React.useState([]);
-  const { theme } = useAppContext();
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
   const data = useSelector(selectData);
 
   React.useEffect(
