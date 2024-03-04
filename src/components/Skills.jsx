@@ -37,7 +37,6 @@ export default function Skills() {
 
 
     const handleClick = (names) => {
-        console.log(names)
         names.forEach(id => {
             const target = document.getElementById(id);
             if (target) {

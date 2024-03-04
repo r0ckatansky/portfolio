@@ -9,6 +9,7 @@ import rouge from "../images/rouge.png";
 import orange from "../images/orange.png";
 import vert from "../images/vert.png";
 import bleu from "../images/bleu.png";
+import { scroller } from 'react-scroll';
 
 // Components
 
@@ -52,6 +53,34 @@ const images = {
 
 export default function StyledCard({ image, name, description, couleurs, url, demo,  }) {
   const [hoveredColors, setHoveredColors] = useState({});
+
+
+  
+  const handleClick = (name) => {
+    const target = document.getElementById(name);
+    if (target) {
+      // Ajoute la classe "highlight" à l'élément cible
+      target.classList.add('highlight');
+      // Supprime l'animation actuelle pour la réinitialiser
+      target.style.animation = 'none';
+      // Attendre un certain temps avant de faire l'animation
+      setTimeout(() => {
+          target.style.animation = 'scaleAnimation 1s forwards';
+      }, 500);
+    }
+      
+    // Défilement animé jusqu'à l'élément cible
+    scroller.scrollTo(name, {
+        duration: 400,
+        delay: 0,
+        smooth: 'easeInOutQuart',
+        offset: -window.innerHeight / 4 // Décalage de la moitié de la hauteur de la fenêtre
+    });
+
+
+}
+
+
   return (
 <StyledCardComponent>
       <Card>
@@ -88,9 +117,9 @@ export default function StyledCard({ image, name, description, couleurs, url, de
           ) : null}
         </Card.Body>
         <Card.Footer className="text-center">
-          <Card.Link href={url}>
-            {"Voir sur GitHub     "}
-            <Icon icon="icomoon-free:github" />
+          <Card.Link onClick={() => {handleClick(name+"precis")}}>
+            {"Voir plus d'informations     "}
+            
           </Card.Link>
         </Card.Footer>
       </Card>
