@@ -67,6 +67,7 @@ export default function Projects() {
                   }) {
                     return (
                       <Col key={id}>
+                        <Element id={name}>
                         <StyledCard
                           image={image}
                           name={name}
@@ -74,6 +75,7 @@ export default function Projects() {
                           url={null}
                           demo={null}
                         />
+                        </Element>
                       </Col>
                     );
                   })}

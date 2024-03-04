@@ -1,10 +1,10 @@
-import { Element } from "react-scroll";
-// Data
+
 // Components
 import { Container } from "react-bootstrap";
 import { Title } from "./globalStyledComponents";
 
-import { Link } from "react-scroll";
+import { Link, Element, scroller } from 'react-scroll';
+import "./anim.css"
 
 import c1 from "../images/c1.png";
 import c2 from "../images/c2.png";
@@ -36,7 +36,29 @@ import c36 from "../images/c36.png";
 export default function Skills() {
 
 
+    const handleClick = (name) => {
+        // Ajoute la classe "highlight" à l'élément cible
+        const target = document.getElementById(name);
+    
+        // Supprime l'animation actuelle pour la réinitialiser
+        target.style.animation = 'none';
+    
+        // Défilement animé jusqu'à l'élément cible
+        scroller.scrollTo('Projets_perso', {
+            duration: 400,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+        });
+    
+        // Attendre un certain temps avant de faire l'animation
+        setTimeout(() => {
+            target.style.animation = 'scaleAnimation 1s forwards';
+        }, 500);
+    }
+    
+
   return (
+    
     <Element name={"Skills"} id="skills">
 
       <section className="section">
@@ -104,9 +126,15 @@ export default function Skills() {
                 <img src={c26} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
             </div>
 
-            <Link to={"Projets_perso"} className="link-icons">
+            <div 
+                className="link-icons" 
+                style={{ cursor: "pointer" }} 
+                onClick={() => handleClick("Un projet de maths")}     
+                onMouseEnter={(e) => { e.currentTarget.style ='transform: scale(1.1);' }} 
+                onMouseLeave={(e) => { e.currentTarget.style = 'transform: scale(1)'; }}
+                >                
                 <img  src={c31} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
-            </Link>
+                </div>
            
             <div>
             </div>
