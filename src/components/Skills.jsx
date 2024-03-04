@@ -50,9 +50,9 @@ export default function Skills() {
         <Container className="text-center">
           <Title>
             <h2>Compétences</h2>
-            <p>Cliquer sur le dernier niveau de chaque compétence renvoie vers un projet illustratif</p>
             <div className="underline"></div>
           </Title>
+            <p>Cliquer sur le dernier niveau de chaque compétence renvoie vers un projet illustratif</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)" }}>
             <div>
                 <img src={c1} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
@@ -111,21 +111,18 @@ export default function Skills() {
                 <img src={c26} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
             </div>
 
-            <Link to={"Projects"} className="link-icons">
+            <Link to={"Projets_perso"} className="link-icons">
                 <img  src={c31} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
             </Link>
            
             <div>
-                <img src={c00} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
             </div>
             <div>
                 <img src={c33} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
             </div>
             <div>
-                <img src={c00} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
             </div>
             <div>
-                <img src={c00} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
             </div>
             <div>
                 <img src={c36} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />

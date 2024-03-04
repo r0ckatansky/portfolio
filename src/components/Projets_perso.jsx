@@ -51,7 +51,7 @@ export default function Projects() {
 
   return (
     <div  ref={sectionRef}>
-      <Element name={"Projects"} id="projects">
+      <Element name={"Projets_perso"} id="Projets_perso">
         <section className="section">
           <Container>
             <Container className="d-flex">
@@ -60,17 +60,6 @@ export default function Projects() {
                 <div className="underline"></div>
               </Title>
             </Container>
-            {isLoading && (
-              <Container className="d-flex">
-                <Loading />
-              </Container>
-            )}
-            {error && <h2 className="text-center">{error}</h2>}
-            {!error && data.length === 0 && (
-              <h2 className="text-center">
-                Oops, you do not have any GitHub projects yet...
-              </h2>
-            )}
             {mainProjects.length !== 0 && (
               <>
                 <Row xs={1} md={2} lg={3} className="g-4 justify-content-center">
@@ -95,20 +84,6 @@ export default function Projects() {
                     );
                   })}
                 </Row>
-                {data.length > 3 && (
-                  <Container className="text-center mt-5">
-                    <Link to="/All-Projects">
-                      <Button
-                        size="lg"
-                        variant={
-                          theme === "light" ? "outline-dark" : "outline-light"
-                        }
-                      >
-                        Tous <Icon icon="icomoon-free:github" /> les projets
-                      </Button>
-                    </Link>
-                  </Container>
-                )}
               </>
             )}
           </Container>
