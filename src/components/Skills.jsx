@@ -36,13 +36,21 @@ import c36 from "../images/c36.png";
 export default function Skills() {
 
 
-    const handleClick = (name) => {
-        // Ajoute la classe "highlight" à l'élément cible
-        const target = document.getElementById(name);
-    
-        // Supprime l'animation actuelle pour la réinitialiser
-        target.style.animation = 'none';
-    
+    const handleClick = (names) => {
+        console.log(names)
+        names.forEach(id => {
+            const target = document.getElementById(id);
+            if (target) {
+              // Ajoute la classe "highlight" à l'élément cible
+              target.classList.add('highlight');
+              // Supprime l'animation actuelle pour la réinitialiser
+              target.style.animation = 'none';
+              // Attendre un certain temps avant de faire l'animation
+              setTimeout(() => {
+                  target.style.animation = 'scaleAnimation 1s forwards';
+              }, 500);
+            }
+          });
         // Défilement animé jusqu'à l'élément cible
         scroller.scrollTo('Projets_perso', {
             duration: 400,
@@ -50,10 +58,7 @@ export default function Skills() {
             smooth: 'easeInOutQuart'
         });
     
-        // Attendre un certain temps avant de faire l'animation
-        setTimeout(() => {
-            target.style.animation = 'scaleAnimation 1s forwards';
-        }, 500);
+
     }
     
 
@@ -110,42 +115,77 @@ export default function Skills() {
             <div>
                 <img src={c21} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
             </div>
-            <div>
+             {/* Optimiser */}
+            <div 
+                className="link-icons" 
+                style={{ cursor: "pointer" }} 
+                onClick={() => handleClick(["Modélisation mathématique", "Développement d'un proxy TCP", "Alternance CTI toulouse"])}     
+                onMouseEnter={(e) => { e.currentTarget.style ='transform: scale(1.1);' }} 
+                onMouseLeave={(e) => { e.currentTarget.style = 'transform: scale(1)'; }}
+                >    
                 <img src={c22} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
             </div>
             <div>
                 <img src={c23} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
             </div>
-            <div>
+             {/* Gérer */}
+            <div 
+                className="link-icons" 
+                style={{ cursor: "pointer" }} 
+                onClick={() => handleClick(["Projet Trisomie 21", "Alternance CTI toulouse"])}     
+                onMouseEnter={(e) => { e.currentTarget.style ='transform: scale(1.1);' }} 
+                onMouseLeave={(e) => { e.currentTarget.style = 'transform: scale(1)'; }}
+                >    
                 <img src={c24} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
             </div>
-            <div>
+             {/* Conduire */}
+            <div 
+                className="link-icons" 
+                style={{ cursor: "pointer" }} 
+                onClick={() => handleClick(["Projet Trisomie 21", "Alternance CTI toulouse", "Projet Trisomie 21"])}     
+                onMouseEnter={(e) => { e.currentTarget.style ='transform: scale(1.1);' }} 
+                onMouseLeave={(e) => { e.currentTarget.style = 'transform: scale(1)'; }}
+                >    
                 <img src={c25} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
             </div>
             <div>
                 <img src={c26} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
             </div>
-
+            {/* Réaliser */}
             <div 
                 className="link-icons" 
                 style={{ cursor: "pointer" }} 
-                onClick={() => handleClick("Un projet de maths")}     
+                onClick={() => handleClick(["Évolution d'une infrastructure", "Alternance CTI toulouse", "Emulation d'un routeur Wi-Fi sur un Raspi"])}     
                 onMouseEnter={(e) => { e.currentTarget.style ='transform: scale(1.1);' }} 
                 onMouseLeave={(e) => { e.currentTarget.style = 'transform: scale(1)'; }}
                 >                
                 <img  src={c31} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
-                </div>
+            </div>
            
             <div>
             </div>
-            <div>
+             {/* Administrer */}
+            <div 
+                className="link-icons" 
+                style={{ cursor: "pointer" }} 
+                onClick={() => handleClick(["Évolution d'une infrastructure", "Alternance CTI toulouse", "Projet Trisomie 21"])}     
+                onMouseEnter={(e) => { e.currentTarget.style ='transform: scale(1.1);' }} 
+                onMouseLeave={(e) => { e.currentTarget.style = 'transform: scale(1)'; }}
+                >
                 <img src={c33} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
             </div>
             <div>
             </div>
             <div>
             </div>
-            <div>
+            {/* Collaborer */}
+            <div 
+                className="link-icons" 
+                style={{ cursor: "pointer" }} 
+                onClick={() => handleClick(["Évolution d'une infrastructure", "Alternance CTI toulouse", "Modélisation mathématique", "Projet Trisomie 21", "Emulation d'un routeur Wi-Fi sur un Raspi", "Développement d'un proxy TCP"])}
+                onMouseEnter={(e) => { e.currentTarget.style ='transform: scale(1.1);' }} 
+                onMouseLeave={(e) => { e.currentTarget.style = 'transform: scale(1)'; }}
+                >
                 <img src={c36} alt="about me" style={{ margin: "5%", maxWidth: "90%", height: "auto" }} />
             </div>
 

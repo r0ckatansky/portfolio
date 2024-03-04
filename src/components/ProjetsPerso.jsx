@@ -4,7 +4,7 @@ import { Element } from "react-scroll";
 // Components
 import { Col, Container, Row } from "react-bootstrap";
 import { Title, } from "./globalStyledComponents";
-import StyledCard from "./StyledCard";
+import StyledCard from "./StyledCardAcademique";
 
 import { useRef } from 'react';
 
@@ -12,27 +12,13 @@ import { useRef } from 'react';
 
 export default function Projects() {
   const mainProjects = [
-    { id: 1, name: "Un projet de maths", description: "c'est un super projet merci Mr. Campi"},
-    { id: 2, name: "Une SAE", description: "c'est une super SAE merci Mr. Kandi"}
+    { id: 1, name: "Évolution d'une infrastructure", description: "C'est la SAE de Mr. Kandi", liste: ["Réaliser", "Administrer", "Collaborer"]}, // SAE but 3
+    { id: 2, name: "Modélisation mathématique", description: "Parler du projet de maths", liste: ["Optimiser", "Collaborer"]}, // projet de maths
+    { id: 3, name: "Projet Trisomie 21", description: "La sae de l'année dernière", liste: ["Administrer", "Gérer", "Conduire", "Collaborer"]}, // SAE but 2
+    { id: 4, name: "Alternance CTI toulouse", description: "Alternance CTI toulouse", liste: ["Réaliser", "Optimiser", "Administrer", "Gérer", "Conduire", "Collaborer"]}, // alternance
+    { id: 5, name: "Emulation d'un routeur Wi-Fi sur un Raspi", description: "Emulation d'un routeur Wi-Fi sur un Raspi", liste: ["Réaliser", "Collaborer"]}, // projet raspi
+    { id: 6, name: "Développement d'un proxy TCP", description: "Développement d'un proxy transparent TCP", liste: ["Optimiser", "Collaborer"]}, // proxy tcp
   ];
-  // React.useEffect(
-  //   function () {
-  //     const tempData = [];
-  //     data.forEach((el, i) => (tempData[i] = Object.create(el)));
-  //     if (data.length !== 0 && filteredProjects.length !== 0) {
-  //       const tempArray = tempData.filter((obj) =>
-  //         filteredProjects.includes(obj.name)
-  //       );
-  //       tempArray.length !== 0
-  //         ? setMainProjects([...tempArray])
-  //         : setMainProjects([...tempData.slice(0, 3)]);
-  //     } else {
-  //       setMainProjects([...tempData.slice(0, 3)]);
-  //     }
-  //   },
-    
-  //   [data]
-  // );
 
   const sectionRef = useRef(null);
 
@@ -57,7 +43,7 @@ export default function Projects() {
                     image,
                     name,
                     description,
-                    html_url,
+                    liste,
                     homepage,
                   }) {
                     return (
@@ -69,6 +55,7 @@ export default function Projects() {
                           description={description}
                           url={null}
                           demo={null}
+                          couleurs={liste}
                         />
                         </Element>
                       </Col>
