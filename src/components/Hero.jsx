@@ -52,9 +52,8 @@ const StyledHero = styled.header`
   }
 
     .hero-img {
-      width: 200px !important;
+      width: 300px !important;
       position: relative;
-      border-radius: 100%;
     }
     .hero-img.active {
       position: fixed;
@@ -128,7 +127,7 @@ export default function Hero() {
             <img
               src={Logo}
               alt="React Logo"
-              className="w-75 mx-auto hero-img"
+              className="hero-img "
             />
           </Col>
         </Row>

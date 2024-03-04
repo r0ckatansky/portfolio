@@ -63,6 +63,11 @@ a:hover {
     font-family: "Permanent Marker";
 }
 
+.card.no-hover-transform:hover {
+  transform: none; /* Annuler la transformation au survol */
+}
+
+
 .card {
   height: var(--card-height);
   border: var(--border);

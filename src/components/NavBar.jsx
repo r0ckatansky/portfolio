@@ -85,11 +85,11 @@ export default function NavBar({ Logo }) {
       { id: "2R", name: "All Projects", route: "/All-Projects" },
     ],
     to: [
-      { id: "1T", name: "Home", to: "Home" },
-      { id: "2T", name: "About Me", to: "About" },
-      { id: "3T", name: "Skills", to: "Skills" },
-      { id: "4T", name: "Projects", to: "Projects" },
-      { id: "5T", name: "Contact", to: "Contact" },
+      { id: "2T", name: "À propos de moi", to: "About" },
+      { id: "3T", name: "Compétences", to: "Skills" },
+      { id: "4T", name: "Projets Académiques", to: "Projets_perso" },
+      { id: "5T", name: "Projets Personels", to: "Projects" },
+      { id: "6T", name: "Contact", to: "Contact" },
     ],
   };
 

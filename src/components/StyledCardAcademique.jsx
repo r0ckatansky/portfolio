@@ -83,7 +83,7 @@ export default function StyledCard({ image, name, description, couleurs, url, de
 
   return (
 <StyledCardComponent>
-      <Card>
+      <Card style={{maxHeight: "280px"}}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr" }}>
           {couleurs && couleurs.map((couleur) => (
             <div 
@@ -106,9 +106,9 @@ export default function StyledCard({ image, name, description, couleurs, url, de
             </div>
           ))}
         </div>
-        <Card.Body className="overflow-auto text-center">
+        <Card.Body className="overflow-auto text-center ">
           <Card.Title>{name}</Card.Title>
-          <Card.Text>{description}</Card.Text>
+          <Card.Text style={{textAlign: "justify", fontSize: "15px"}}>{description}</Card.Text>
           {demo !== "" && demo !== null ? (
             <Card.Link href={demo}>
               {"Live Demo "}
