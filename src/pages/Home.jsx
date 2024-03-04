@@ -6,7 +6,7 @@ import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
-import Projets_perso from "../components/Projets_perso";
+import ProjetsPerso from "../components/ProjetsPerso";
 
 import Contact from "../components/Contact";
 import { BackToTop } from "../components/globalStyledComponents";
