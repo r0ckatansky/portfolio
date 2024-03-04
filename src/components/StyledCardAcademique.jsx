@@ -67,12 +67,11 @@ export default function StyledCard({ image, name, description, couleurs, url, de
                 variant="top"
                 src={images[couleur]} 
                 alt={name}
-                // className="mx-auto w-50"
               />
               {/* Afficher le texte si la couleur est survolée */}
               {hoveredColors[couleur] && (
-                <div style={{}}>
-                  {couleur}
+                <div style={{fontSize: "80%", textAlign: "center"}}>
+                  <p>{couleur}</p>
                 </div>
               )}
             </div>
