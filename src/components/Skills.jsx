@@ -3,7 +3,7 @@
 import { Container } from "react-bootstrap";
 import { Title } from "./globalStyledComponents";
 
-import { Link, Element, scroller } from 'react-scroll';
+import { Element, scroller } from 'react-scroll';
 import "./anim.css"
 
 import c1 from "../images/c1.png";

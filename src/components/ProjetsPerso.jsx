@@ -1,9 +1,6 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { selectData } from "../pages/allProjectsSlice";
+
 import { Element } from "react-scroll";
-// Data
-import { filteredProjects } from "../data";
 // Components
 import { Col, Container, Row } from "react-bootstrap";
 import { Title, } from "./globalStyledComponents";
@@ -18,8 +15,6 @@ export default function Projects() {
     { id: 1, name: "Un projet de maths", description: "c'est un super projet merci Mr. Campi"},
     { id: 2, name: "Une SAE", description: "c'est une super SAE merci Mr. Kandi"}
   ];
-  const data = useSelector(selectData);
-
   // React.useEffect(
   //   function () {
   //     const tempData = [];
