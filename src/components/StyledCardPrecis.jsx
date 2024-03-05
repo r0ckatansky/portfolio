@@ -115,7 +115,7 @@ export default function StyledCard({ image, name, description, couleurs, url, de
         <Card.Body className="overflow-auto text-center">
           <div style={{display: "grid", gridTemplateColumns: "1fr 1fr"}}>
             <div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr", maxHeight: "100px" }}>
                 {couleurs && couleurs.map((couleur) => (
                   <div key={couleur} >
                     <Card.Img
@@ -132,7 +132,7 @@ export default function StyledCard({ image, name, description, couleurs, url, de
                   </div>
                 ))}
               </div>
-              <Card.Title>{name}</Card.Title>
+              <Card.Title style={{margin: "5%"}}>{name}</Card.Title>
               {/* <Card.Text>{description}</Card.Text> */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 3fr" }}>
               
